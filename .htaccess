@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# QSA query string append ???
+# 콤마사이에 공백 있으면 안됌
+RewriteRule (.*) index.php?page=$1 [L,QSA,NC]
